@@ -55,9 +55,15 @@ set $menu bemenu-run -i -l 20 -H 25 --fb "#1e1e2e" --ff "#94e2d5" --nb "#1e1e2e"
 bindsym $mod+d exec $menu
 ```
 
+- You can also use an environment variale to set the theme.
+```
+export BEMENU_OPTS='-i -l 20 -H 25 --fb "#1e1e2e" --ff "#94e2d5" --nb "#1e1e2e" --nf "#f5e0dc" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#cba6f7" --hf "#89b4fa" --nf "#f5e0dc" --af "#f5e0dc" --ab "#1e1e2e"'
+```
+
 ## 💝 Thanks to
 
-- [Iván Ruzo](https://gitlab.com/iruzo)
+- [Iván Ruzo](https://github.com/iruzo)
+- [Crony Akatsuki](https://github.com/cronyakatsuki)
 
 &nbsp;
 
