@@ -39,25 +39,25 @@
 - Launch from your wm, script or command bemenu adding the desired theme as params:
 ```
 # mocha
-bemenu-run -i -l 20 -H 25 --fb "#1e1e2e" --ff "#94e2d5" --nb "#1e1e2e" --nf "#f5e0dc" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#cba6f7" --hf "#89b4fa" --nf "#f5e0dc" --af "#f5e0dc" --ab "#1e1e2e"
+bemenu-run -i -l 20 --fb "#1e1e2e" --ff "#94e2d5" --nb "#1e1e2e" --nf "#f5e0dc" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#cba6f7" --hf "#89b4fa" --nf "#f5e0dc" --af "#f5e0dc" --ab "#1e1e2e"
 # macchiato
-bemenu-run -i -l 20 -H 25 --fb "#24273a" --ff "#8bd5ca" --nb "#24273a" --nf "#f4dbd6" --tb "#24273a" --hb "#24273a" --tf "#c6a0f6" --hf "#8aadf4" --nf "#f4dbd6" --af "#f4dbd6" --ab "#24273a"
+bemenu-run -i -l 20 --fb "#24273a" --ff "#8bd5ca" --nb "#24273a" --nf "#f4dbd6" --tb "#24273a" --hb "#24273a" --tf "#c6a0f6" --hf "#8aadf4" --nf "#f4dbd6" --af "#f4dbd6" --ab "#24273a"
 # frappe
-bemenu-run -i -l 20 -H 25 --fb "#303446" --ff "#81c8be" --nb "#303446" --nf "#f2d5cf" --tb "#303446" --hb "#303446" --tf "#ca9ee6" --hf "#8caaee" --nf "#f2d5cf" --af "#f2d5cf" --ab "#303446"
+bemenu-run -i -l 20 --fb "#303446" --ff "#81c8be" --nb "#303446" --nf "#f2d5cf" --tb "#303446" --hb "#303446" --tf "#ca9ee6" --hf "#8caaee" --nf "#f2d5cf" --af "#f2d5cf" --ab "#303446"
 # latte
-bemenu-run -i -l 20 -H 25 --fb "#eff1f5" --ff "#179299" --nb "#eff1f5" --nf "#4c4f69" --tb "#eff1f5" --hb "#eff1f5" --tf "#8839ef" --hf "#fe640b" --nf "#4c4f69" --af "#4c4f69" --ab "#eff1f5"
+bemenu-run -i -l 20 --fb "#eff1f5" --ff "#179299" --nb "#eff1f5" --nf "#4c4f69" --tb "#eff1f5" --hb "#eff1f5" --tf "#8839ef" --hf "#fe640b" --nf "#4c4f69" --af "#4c4f69" --ab "#eff1f5"
 ```
 
 - Example for i3/sway config:
 ```
 # mocha
-set $menu bemenu-run -i -l 20 -H 25 --fb "#1e1e2e" --ff "#94e2d5" --nb "#1e1e2e" --nf "#f5e0dc" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#cba6f7" --hf "#89b4fa" --nf "#f5e0dc" --af "#f5e0dc" --ab "#1e1e2e"
+set $menu bemenu-run -i -l 20 --fb "#1e1e2e" --ff "#94e2d5" --nb "#1e1e2e" --nf "#f5e0dc" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#cba6f7" --hf "#89b4fa" --nf "#f5e0dc" --af "#f5e0dc" --ab "#1e1e2e"
 bindsym $mod+d exec $menu
 ```
 
 - You can also use an environment variale to set the theme.
 ```
-export BEMENU_OPTS='-i -l 20 -H 25 --fb "#1e1e2e" --ff "#94e2d5" --nb "#1e1e2e" --nf "#f5e0dc" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#cba6f7" --hf "#89b4fa" --nf "#f5e0dc" --af "#f5e0dc" --ab "#1e1e2e"'
+export BEMENU_OPTS='-i -l 20 --fb "#1e1e2e" --ff "#94e2d5" --nb "#1e1e2e" --nf "#f5e0dc" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#cba6f7" --hf "#89b4fa" --nf "#f5e0dc" --af "#f5e0dc" --ab "#1e1e2e"'
 ```
 
 ## 💝 Thanks to
