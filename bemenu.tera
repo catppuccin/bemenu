@@ -1,3 +1,7 @@
+---
+whiskers:
+  version: 2.0.0
+---
 <h3 align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
@@ -37,61 +41,28 @@
 ## Usage
 
 - Launch from your wm, script or command bemenu adding the desired theme as params:
+{% for id, flavor in flavors %}
+{%- set palette = flavor.colors -%}
 ```sh
-# Latte
-bemenu-run --fb "#eff1f5" --ff "#4c4f69" --nb "#eff1f5" --nf "#4c4f69" --tb "#eff1f5" --hb "#eff1f5" --tf "#d20f39" --hf "#df8e1d" --af "#4c4f69" --ab "#eff1f5"
+# {{ flavor.name }}
+bemenu-run --fb "#{{ palette.base.hex }}" --ff "#{{ palette.text.hex }}" --nb "#{{ palette.base.hex }}" --nf "#{{ palette.text.hex }}" --tb "#{{ palette.base.hex }}" --hb "#{{ palette.base.hex }}" --tf "#{{ palette.red.hex }}" --hf "#{{ palette.yellow.hex }}" --af "#{{ palette.text.hex }}" --ab "#{{ palette.base.hex }}"
 ```
+{% endfor %}
+{% for id, flavor in flavors %}
+{%- set palette = flavor.colors -%}
 ```sh
-# Frappé
-bemenu-run --fb "#303446" --ff "#c6d0f5" --nb "#303446" --nf "#c6d0f5" --tb "#303446" --hb "#303446" --tf "#e78284" --hf "#e5c890" --af "#c6d0f5" --ab "#303446"
-```
-```sh
-# Macchiato
-bemenu-run --fb "#24273a" --ff "#cad3f5" --nb "#24273a" --nf "#cad3f5" --tb "#24273a" --hb "#24273a" --tf "#ed8796" --hf "#eed49f" --af "#cad3f5" --ab "#24273a"
-```
-```sh
-# Mocha
-bemenu-run --fb "#1e1e2e" --ff "#cdd6f4" --nb "#1e1e2e" --nf "#cdd6f4" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#f38ba8" --hf "#f9e2af" --af "#cdd6f4" --ab "#1e1e2e"
-```
-
-```sh
-# Latte
-set $menu bemenu-run --fb "#eff1f5" --ff "#4c4f69" --nb "#eff1f5" --nf "#4c4f69" --tb "#eff1f5" --hb "#eff1f5" --tf "#d20f39" --hf "#df8e1d" --af "#4c4f69" --ab "#eff1f5"
+# {{ flavor.name }}
+set $menu bemenu-run --fb "#{{ palette.base.hex }}" --ff "#{{ palette.text.hex }}" --nb "#{{ palette.base.hex }}" --nf "#{{ palette.text.hex }}" --tb "#{{ palette.base.hex }}" --hb "#{{ palette.base.hex }}" --tf "#{{ palette.red.hex }}" --hf "#{{ palette.yellow.hex }}" --af "#{{ palette.text.hex }}" --ab "#{{ palette.base.hex }}"
 bindsym $mod+d exec $menu
 ```
+{% endfor %}
+{% for id, flavor in flavors %}
+{%- set palette = flavor.colors -%}
 ```sh
-# Frappé
-set $menu bemenu-run --fb "#303446" --ff "#c6d0f5" --nb "#303446" --nf "#c6d0f5" --tb "#303446" --hb "#303446" --tf "#e78284" --hf "#e5c890" --af "#c6d0f5" --ab "#303446"
-bindsym $mod+d exec $menu
+# {{ flavor.name }}
+export BEMENU_OPTS='--fb "#{{ palette.base.hex }}" --ff "#{{ palette.text.hex }}" --nb "#{{ palette.base.hex }}" --nf "#{{ palette.text.hex }}" --tb "#{{ palette.base.hex }}" --hb "#{{ palette.base.hex }}" --tf "#{{ palette.red.hex }}" --hf "#{{ palette.yellow.hex }}" --af "#{{ palette.text.hex }}" --ab "#{{ palette.base.hex }}"'
 ```
-```sh
-# Macchiato
-set $menu bemenu-run --fb "#24273a" --ff "#cad3f5" --nb "#24273a" --nf "#cad3f5" --tb "#24273a" --hb "#24273a" --tf "#ed8796" --hf "#eed49f" --af "#cad3f5" --ab "#24273a"
-bindsym $mod+d exec $menu
-```
-```sh
-# Mocha
-set $menu bemenu-run --fb "#1e1e2e" --ff "#cdd6f4" --nb "#1e1e2e" --nf "#cdd6f4" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#f38ba8" --hf "#f9e2af" --af "#cdd6f4" --ab "#1e1e2e"
-bindsym $mod+d exec $menu
-```
-
-```sh
-# Latte
-export BEMENU_OPTS='--fb "#eff1f5" --ff "#4c4f69" --nb "#eff1f5" --nf "#4c4f69" --tb "#eff1f5" --hb "#eff1f5" --tf "#d20f39" --hf "#df8e1d" --af "#4c4f69" --ab "#eff1f5"'
-```
-```sh
-# Frappé
-export BEMENU_OPTS='--fb "#303446" --ff "#c6d0f5" --nb "#303446" --nf "#c6d0f5" --tb "#303446" --hb "#303446" --tf "#e78284" --hf "#e5c890" --af "#c6d0f5" --ab "#303446"'
-```
-```sh
-# Macchiato
-export BEMENU_OPTS='--fb "#24273a" --ff "#cad3f5" --nb "#24273a" --nf "#cad3f5" --tb "#24273a" --hb "#24273a" --tf "#ed8796" --hf "#eed49f" --af "#cad3f5" --ab "#24273a"'
-```
-```sh
-# Mocha
-export BEMENU_OPTS='--fb "#1e1e2e" --ff "#cdd6f4" --nb "#1e1e2e" --nf "#cdd6f4" --tb "#1e1e2e" --hb "#1e1e2e" --tf "#f38ba8" --hf "#f9e2af" --af "#cdd6f4" --ab "#1e1e2e"'
-```
-
+{% endfor %}
 
 ## 💝 Thanks to
 
